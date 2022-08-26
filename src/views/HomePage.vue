@@ -4,7 +4,7 @@
     <HeaderComponent msg="Home" />
   </div>
   <div>
-  <img src="../assets/Frame.png" class="m-auto mt-10">
+  <img src="../assets/Frame.png" class="m-auto mt-12">
     <ul >
       <li 
       v-for="client in clients" 
@@ -13,7 +13,9 @@
       >
         <span>{{client.name}}</span>
         <span>{{client.number}}</span>
-        <span>{{client.description}}</span>
+        <br />
+        <br />
+        <span>{{ client.description }}</span>
         <button>
          <img src="../assets/Reply.png">
         </button>

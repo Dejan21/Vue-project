@@ -1,12 +1,12 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="mt-5 navbar bg-red-500 p-4 w-30 flex flex-row">
+  <div class="mt-5 border-solid shadow-md navbar bg-white-500 p-4 w-30 flex flex-row justify-between">
     <p class="text-left pl-3">Home</p>
-    <div class="h1">
-      <img src="../assets/Vector.png" alt="" />
+    <div>
+      <img src="../assets/Grouplogo.png"  />
       <h1>Sellsio</h1>
     </div>
     <div class="input">
+      <img src="../assets/Search.png" class="mt-2" />
       <input type="text" placeholder="search for a client" class="ml-30" />
     </div>
   </div>
@@ -14,25 +14,11 @@
 
 <script>
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: "Navbar",
+  name: "NavbarComponent",
   props: {
     msg: String,
   },
 };
 </script>
 
-<style scoped>
-.h1 {
-  margin-left: 690px;
-  font-size: large;
-  color: black;
-}
-input {
-  margin-left: 700px;
-}
-.navbar {
-  background-color: rgb(197, 181, 181);
-  box-shadow: 20px;
-}
-</style>
+

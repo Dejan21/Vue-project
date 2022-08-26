@@ -7,7 +7,11 @@
     </div>
     <div class="input flex">
       <img src="../assets/Search.png" class="mt-2" />
-      <input type="text" placeholder="search for a client" class="ml-30" />
+      <input
+       v-model="newClientName"
+       type="text" 
+       placeholder="search for a client" 
+       class="ml-30" />
     </div>
   </div>
 </template>
@@ -18,6 +22,11 @@ export default {
   props: {
     msg: String,
   },
+  data(){
+    return {
+      newClientName: ''
+    }
+  }
 };
 </script>
 

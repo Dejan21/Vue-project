@@ -1,9 +1,10 @@
 <template>
   <div class="home">
-    <Navbar msg="Home" />
-    <HeaderComponent msg="Home" />
+    <Navbar  />
+    <HeaderComponent  />
+    <LeftPage />
   </div>
-  <div>
+  <div class="bg-red-50">
   <img src="../assets/Frame.png" class="m-auto mt-12">
     <ul >
       <li 
@@ -11,8 +12,8 @@
       :key="client.id" 
       class=" li bg-red-50 p-2 "
       >
-        <span>{{client.name}}</span>
-        <span>{{client.number}}</span>
+        <span> {{ client.name }} </span>
+        <span>{{ client.number }}</span>
         <br />
         <br />
         <span>{{ client.description }}</span>
@@ -25,15 +26,16 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
+
 import Navbar from "../components/Navbar.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import LeftPage from "@/pages/LeftPage.vue";
 
 export default {
   components: {
     Navbar,
-    HeaderComponent
+    HeaderComponent,
+    LeftPage
 },
 data(){
   return {

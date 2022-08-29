@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute pt-32 right-96 inline">
+    <div class="absolute pt-16 right-96 inline">
         <ul>
          <li v-for="appointment in appointments"
          :key="appointment.id"

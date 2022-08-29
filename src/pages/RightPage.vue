@@ -17,39 +17,42 @@
 </template>
 
 <script>
+    import { ref } from 'vue'
+
  export default {
-    data(){
-        return {
-            appointments: [
+    setup(){
+      const appointments = ref([
+        {
+                 id: 1,
+                 content:'New clients',
+                 pieces: '44',
+                 image: [require("../assets/image.png")],
+                 img: [require("../assets/ArrowSquareRight.png")]
+             },
              {
-                id: 1,
-                content:'New clients',
-                pieces: '44',
-                image: [require("../assets/image.png")],
-                img: [require("../assets/ArrowSquareRight.png")]
-            },
-            {
-                id: 2,
-                content:'Appointments booked',
-                pieces: '26',
-                image: [require("../assets/image1.png")],
-                img: [require("../assets/ArrowSquareRight.png")]
-            },
-            {
-                id: 3,
-                content:'Appointments booked',
-                pieces: '8',
-                image: [require("../assets/image1.png")],
-                img: [require("../assets/ArrowSquareRight.png")]
-            },
-            {
+                 id: 2,
+                 content:'Appointments booked',
+                 pieces: '26',
+                 image: [require("../assets/image1.png")],
+                 img: [require("../assets/ArrowSquareRight.png")]
+             },
+             {
+                 id: 3,
+                 content:'Appointments booked',
+                 pieces: '8',
+                 image: [require("../assets/image1.png")],
+                 img: [require("../assets/ArrowSquareRight.png")]
+             },
+             {
                 id: 4,
                 content:'Appointments booked',
                 pieces: '6',
                 image: [require("../assets/image1.png")],
                 img: [require("../assets/ArrowSquareRight.png")]
-            },
-            ]
+             },
+      ])
+        return {
+         appointments
         }
     }
  }

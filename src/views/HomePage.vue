@@ -33,6 +33,7 @@ import Navbar from "../components/Navbar.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import LeftPage from "@/pages/LeftPage.vue";
 import RightPage from "@/pages/RightPage.vue";
+import { ref } from 'vue'
 
 export default {
   components: {
@@ -41,52 +42,54 @@ export default {
     LeftPage,
     RightPage
 },
-data(){
-  return {
-    clients: [
-      {
-        id:1,
-        name: 'Michael Connor',
-        number: '(+ 41 34 345 2033)',
-        description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
-        image: [require("../assets/michael.png")],
-      },
-      {
-        id:1,
-        name: 'Amanda',
-        number: '(+ 41 12 585 2236)',
-        description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
-        image: [require("../assets/amanda.png")],
-      },
-      {
-        id:1,
-        name: 'John Connor',
-        number: '(+41 34 345 2023)',
-        description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
-        image: [require("../assets/UserCircle.png")],
-      },
-      {
-        id:1,
-        name: 'Helen Connor',
-        number: '(+41 32 25 5889)',
-        description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
-        image: [require("../assets/helen.png")],
-      },
-      {
-        id:1,
-        name: 'Michael Connor',
-        number: '(+41 34 345 2023)',
-        description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
-        image: [require("../assets/UserCircle.png")],
-      },
+setup(){
+
+  const clients = ref ([
+    {
+         id:1,
+         name: 'Michael Connor',
+         number: '(+ 41 34 345 2033)',
+         description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting   here       for your response. Have a nice day, Michael!',
+         image: [require("../assets/michael.png")],
+       },
        {
-        id:1,
-        name: 'Michael Connor',
-        number: '(+41 34 345 2023)',
-        description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
-        image: [require("../assets/michael.png")],
-      },
-    ]
+         id:1,
+         name: 'Amanda',
+         number: '(+ 41 12 585 2236)',
+         description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
+         image: [require("../assets/amanda.png")],
+       },
+       {
+         id:1,
+         name: 'John Connor',
+         number: '(+41 34 345 2023)',
+         description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
+         image: [require("../assets/UserCircle.png")],
+       },
+       {
+         id:1,
+         name: 'Helen Connor',
+         number: '(+41 32 25 5889)',
+         description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
+         image: [require("../assets/helen.png")],
+       },
+       {
+         id:1,
+         name: 'Michael Connor',
+         number: '(+41 34 345 2023)',
+         description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
+         image: [require("../assets/UserCircle.png")],
+       },
+        {
+         id:1,
+         name: 'Michael Connor',
+         number: '(+41 34 345 2023)',
+         description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
+         image: [require("../assets/michael.png")],
+       },
+  ])
+  return {
+  clients
   }
 }
 };

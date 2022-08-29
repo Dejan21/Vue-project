@@ -3,6 +3,7 @@
     <Navbar  />
     <HeaderComponent  />
     <LeftPage />
+    <RightPage />
   </div>
   <div class="bg-red-50">
   <img src="../assets/Frame.png" class="m-auto mt-12">
@@ -30,12 +31,14 @@
 import Navbar from "../components/Navbar.vue";
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import LeftPage from "@/pages/LeftPage.vue";
+import RightPage from "@/pages/RightPage.vue";
 
 export default {
   components: {
     Navbar,
     HeaderComponent,
-    LeftPage
+    LeftPage,
+    RightPage
 },
 data(){
   return {

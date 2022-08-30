@@ -1,16 +1,16 @@
 <template>
     <div class="absolute pt-32 ml-96">
-        <ul>
+        <ul class="">
          <li  v-for="sale in sales"
               :key="sale.id" 
-              class="bg-red-50 p-2"
+              class="bg-red-50 p-2 h-20 w-52"
          >
            <span> {{sale.content}} </span>
            <br />
            <span class="font-bold"> {{sale.pieces}} </span>
            <span class="font-bold"> {{sale.price}} </span>
            <img :src="sale.image" 
-                 class="relative right-12 bottom-11" 
+                 class="relative right-14 text-start bottom-11" 
                  /> 
          </li>
         </ul>
@@ -35,7 +35,7 @@ import { ref } from 'vue'
                  id: 2,
                  content:'Retail sales',
                  pieces: '6',
-                 image: [import("../assets/sales.png")],
+                 image: [require("../assets/sales.png")],
              },
              {
                  id: 3,
@@ -77,5 +77,8 @@ import { ref } from 'vue'
 
 
 <style>
-
+ li {
+    border-bottom: 1px dotted grey;
+    text-align: start;
+ }
 </style>

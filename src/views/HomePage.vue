@@ -11,16 +11,16 @@
       <li 
       v-for="client in clients" 
       :key="client.id" 
-      class=" li bg-red-50 p-2 relative left-14 text-start border-solid"
+      class=" li bg-red-50 p-2 relative left-14 text-start border-double"
       >
-        <img :src="client.image" class="relative top-28 right-16" />
+        <img :src="client.image" class="relative top-24 right-16" />
         <span > {{ client.name }} </span>
         <span>{{ client.number }}</span>
         <span class="relative left-20 ">{{ client.hours }}</span>
         <br />
         <br />
         <span>{{ client.description }}</span>
-        <button>
+        <button class="block">
          <img src="../assets/Reply.png">
         </button>
       </li>
@@ -104,10 +104,13 @@ setup(){
 
 <style scoped>
 .li{
-    width: 400px;
-    margin: auto;
+    width: 590px;
     margin-top: 2px;
-    height: 260px;
+    height: 270px;
+    border: double;
+    text-align: start;
+    padding-left: 80px;
+    margin-left: 600px;
 }
 
 </style>

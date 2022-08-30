@@ -5,7 +5,7 @@
       <img src="../assets/Grouplogo.png"  />
       <h1>Sellsio</h1>
     </div>
-    <div class="input flex">
+    <div class="input flex  border-red-300">
       <img src="../assets/Search.png" class="mt-2 fixed right-7 top-8" />
       <input
        v-model="newClientName"
@@ -24,7 +24,7 @@ export default {
   },
   data(){
     return {
-      newClientName: ''
+    
     }
   }
 };

@@ -29,12 +29,13 @@ import { ref } from 'vue'
                  content:'Daily sales',
                  pieces: '6',
                  image: [require("../assets/sales.png")],
+              
              },
              {
                  id: 2,
                  content:'Retail sales',
                  pieces: '6',
-                 image: [require("../assets/sales.png")],
+                 image: [import("../assets/sales.png")],
              },
              {
                  id: 3,

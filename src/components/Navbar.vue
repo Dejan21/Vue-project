@@ -6,12 +6,12 @@
       <h1>Sellsio</h1>
     </div>
     <div class="input flex">
-      <img src="../assets/Search.png" class="mt-2" />
+      <img src="../assets/Search.png" class="mt-2 fixed right-7 top-8" />
       <input
        v-model="newClientName"
        type="text" 
-       placeholder="search for a client" 
-       class="ml-30" />
+       placeholder="Search for a client" 
+       class="ml-30 rounded-lg border-red-300 w-72 h-8 " />
     </div>
   </div>
 </template>

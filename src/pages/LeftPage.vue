@@ -1,11 +1,11 @@
 <template>
-    <div class="absolute pt-36 ml-72">
+    <div class="absolute pt-24 ml-72">
         <ul class="border-b-gray w-72">
          <li  v-for="sale in sales"
               :key="sale.id" 
-              class=" pt-6 h-20 border border-t-0 border-l-0 pl-20 text-justify w-72 border-b-gray"
+              class=" pt-6 h-20 border border-t-0 border-l-0 border-r-0 pl-20 text-justify w-72 border-b-gray"
          >
-           <span class="relative right-6"> {{sale.content}} </span>
+           <span class="content relative right-6"> {{sale.content}} </span>
            <br />
            <span class="font-bold relative right-6"> {{sale.pieces}} </span>
            <span class="font-bold relative right-6"> {{sale.price}} </span>
@@ -82,6 +82,9 @@ import { ref } from 'vue'
  li {
     margin-left: 52px;
     background-color: #FFFCFC;
+ }
+ .content {
+    color: #9F9F9F
  }
  
 </style>

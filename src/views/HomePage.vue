@@ -5,12 +5,12 @@
     <HeaderComponent  />
     <LeftPage />
     <RightPage />
-  <img src="../assets/Frame.png" class="m-auto  pt-12">
-    <ul  >
+  <img src="../assets/Frame.png" class="float-right pt-20 ">
+    <ul class="mt-40" >
       <li 
       v-for="client in clients" 
       :key="client.id" 
-      class=" li p-2 relative left-14 text-start"
+      class=" li p-2 relative left-14 pl-20 text-start"
       >
         <img :src="client.defaultAvatar" class="relative top-24 right-16" />
         <span class="first"> {{ client.name }} </span>
@@ -114,9 +114,7 @@ setup(){
 .li{
     width: 605px;
     height: 235px;
-    text-align: start;
-    padding-left: 80px;
-    margin-left: 593px;
+    margin-left: 563px;
     border-bottom: 1px solid rgba(224, 224, 224, 1);
     border-left: 1px solid rgba(224, 224, 224, 1);
     border-right: 1px solid rgba(224, 224, 224, 1);

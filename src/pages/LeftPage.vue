@@ -1,16 +1,16 @@
 <template>
     <div class="absolute pt-32 ml-96">
-        <ul class="border-b border-b-gray">
+        <ul class="border-b-gray w-72">
          <li  v-for="sale in sales"
               :key="sale.id" 
-              class=" p-2 h-20 w-52 border-b border-b-gray"
+              class=" p-6 h-20 border-b w-70 border-b-gray"
          >
-           <span class="relative left-16"> {{sale.content}} </span>
+           <span class="relative "> {{sale.content}} </span>
            <br />
-           <span class="font-bold relative left-16"> {{sale.pieces}} </span>
-           <span class="font-bold relative left-16"> {{sale.price}} </span>
+           <span class="font-bold relative"> {{sale.pieces}} </span>
+           <span class="font-bold text-start"> {{sale.price}} </span>
            <img :src="sale.defaultAvatar" 
-                 class="relative right-15 text-start bottom-11" 
+                 class="relative right-20 text-start bottom-11" 
                  /> 
          </li>
         </ul>

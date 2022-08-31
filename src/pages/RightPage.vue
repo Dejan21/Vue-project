@@ -1,16 +1,16 @@
 <template>
-    <div class="absolute pt-20 right-96 inline">
+    <div class="flex flex-col float-right mr-96 mt-20 w-72 h-16">
         <ul >
          <li v-for="appointment in appointments"
          :key="appointment.id"
-         class="mr-6 h-18 border-b border-b-gray"
+         class="border-b border-b-gray w-72 relative pr-10 text-center"
          >
          <img :src="appointment.defaultAvatar" 
-              class="relative right-14 top-12" />
+              class=" relative  top-12" />
          <span>{{appointment.content}}</span>
          <br />
          <span class="font-bold">{{appointment.pieces}}</span>
-         <img :src="appointment.defaultAvatarIcon" class="relative left-44 bottom-10" />
+         <img :src="appointment.defaultAvatarIcon" class="relative left-56 bottom-10" />
          </li>
         </ul>
     </div>

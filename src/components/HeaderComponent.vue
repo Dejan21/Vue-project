@@ -44,7 +44,8 @@ export default {
 <style scoped>
  .container-fluid{
   margin-left: 190px;
-  padding: 10px
+  padding: 10px;
+  border-color: rgba(241, 183, 179, 0), rgba(216, 89, 78, 1), rgba(255, 255, 255, 0.9)
  }
 
 </style>

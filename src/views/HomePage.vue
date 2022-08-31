@@ -1,17 +1,16 @@
 <template>
-  <div class="home">
-    <Navbar  />
+  <Navbar  />
+
+  <div class="home overflow-hidden mt-0">
     <HeaderComponent  />
     <LeftPage />
     <RightPage />
-  </div>
-  <div class="bg-red-50 ">
-  <img src="../assets/Frame.png" class="m-auto mt-12 pt-12">
+  <img src="../assets/Frame.png" class="m-auto  pt-12">
     <ul  >
       <li 
       v-for="client in clients" 
       :key="client.id" 
-      class=" li bg-red-50 p-2 relative left-14 text-start"
+      class=" li p-2 relative left-14 text-start"
       >
         <img :src="client.defaultAvatar" class="relative top-24 right-16" />
         <span class="first"> {{ client.name }} </span>
@@ -20,7 +19,7 @@
         <br />
         <span>{{ client.description }}</span>
         <button class="block">
-         <img class="pt-3" src="../assets/Reply.png">
+         <img class="pt-2" src="../assets/Reply.png">
         </button>
       </li>
     </ul>
@@ -91,7 +90,6 @@ setup(){
          number: '(+41 34 345 2023)',
          hours: '2 days ago',
          description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
-        //  image: [require("../assets/UserCircle.png")],
          defaultAvatar: UserCircle,
          neededData: {img: defaultAvatarIcon}
        },
@@ -115,17 +113,21 @@ setup(){
 <style scoped>
 .li{
     width: 605px;
-    margin-top: 2px;
-    height: 245px;
+    height: 235px;
     text-align: start;
     padding-left: 80px;
     margin-left: 593px;
-    border-bottom: 1px solid grey;
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    border-left: 1px solid rgba(224, 224, 224, 1);
+    border-right: 1px solid rgba(224, 224, 224, 1);
+    background-color: #FFFCFC;
 }
 
 .first{
   color:#9F9F9F
 }
+.home{
+  background-color: #FFFCFC;
+}
+
 </style>

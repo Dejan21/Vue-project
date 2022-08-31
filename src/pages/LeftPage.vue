@@ -3,7 +3,7 @@
         <ul class="border-b border-b-gray">
          <li  v-for="sale in sales"
               :key="sale.id" 
-              class="bg-red-50 p-2 h-20 w-52 border-b border-b-gray"
+              class=" p-2 h-20 w-52 border-b border-b-gray"
          >
            <span class="relative left-16"> {{sale.content}} </span>
            <br />
@@ -55,21 +55,18 @@ import { ref } from 'vue'
                  id: 5,
                  content:'Invoices raised',
                  price: '$ 259',
-                 image: [require("../assets/invoice.png")],
                  defaultAvatar: InvoiceIcon,
              },
              {
                  id: 6,
                  content:'Total invoices',
                  pieces: '156',
-                 image: [require("../assets/invoice.png")],
                  defaultAvatar: InvoiceIcon,
              },
              {
                  id: 7,
                  content:'Expensens submitted',
                  pieces: '34',
-                 image: [require("../assets/invoice.png")],
                  defaultAvatar: InvoiceIcon,
            }
         ])
@@ -83,8 +80,9 @@ import { ref } from 'vue'
 
 <style>
  li {
-    /* border-bottom: 1px solid grey; */
     text-align: start;
     margin-left: 52px;
+    background-color: #FFFCFC;
  }
+ 
 </style>

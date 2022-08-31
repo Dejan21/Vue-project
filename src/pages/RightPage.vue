@@ -1,6 +1,6 @@
 <template>
     <div class="absolute pt-20 right-96 inline">
-        <ul>
+        <ul >
          <li v-for="appointment in appointments"
          :key="appointment.id"
          class="mr-6 h-18 border-b border-b-gray"
@@ -62,7 +62,11 @@
 </script>
 
 <style>
- /* li{
-    border-bottom: 1px solid grey;
- } */
+ .content{
+    color:#9F9F9F
+ }
+ ul{
+    background-color: #FFFCFC;
+ }
+ 
 </style>

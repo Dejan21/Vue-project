@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-5 border-solid shadow-md navbar bg-white-500 p-4 w-30 flex flex-row justify-between">
-    <p class="text-left pl-64 text-slate-600 text-lg">Home</p>
+  <div class="mt-5 border-solid shadow-md navbar bg-white-500 p-4 w-30 flex flex-row justify-between md:flex">
+    <p class="text-left pl-64 font-bold text-gray-500 text-lg">Home</p>
     <div class="flex font-bold items-center ml-56">
       <img src="../assets/Grouplogo.png"  />
       <h1>Sellsio</h1>
@@ -10,7 +10,7 @@
       <input
        type="text" 
        placeholder="Search for a client" 
-       class="rounded-lg border-solid border-2 border-red-300 w-72 h-8 mr-40" />
+       class="rounded-lg border-solid border-2 w-72 h-8 mr-40 input" />
     </div>
   </div>
 </template>
@@ -29,4 +29,8 @@ export default {
 };
 </script>
 
-
+<style>
+  .input{
+    border-color: rgba(247, 144, 137, 1);
+  }
+</style>

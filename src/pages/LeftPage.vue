@@ -1,16 +1,16 @@
 <template>
     <div class="absolute pt-32 ml-96">
-        <ul class="">
+        <ul class="border-b border-b-gray">
          <li  v-for="sale in sales"
               :key="sale.id" 
-              class="bg-red-50 p-2 h-20 w-52"
+              class="bg-red-50 p-2 h-20 w-52 border-b border-b-gray"
          >
-           <span> {{sale.content}} </span>
+           <span class="relative left-16"> {{sale.content}} </span>
            <br />
-           <span class="font-bold"> {{sale.pieces}} </span>
-           <span class="font-bold"> {{sale.price}} </span>
-           <img :src="sale.image" 
-                 class="relative right-14 text-start bottom-11" 
+           <span class="font-bold relative left-16"> {{sale.pieces}} </span>
+           <span class="font-bold relative left-16"> {{sale.price}} </span>
+           <img :src="sale.defaultAvatar" 
+                 class="relative right-15 text-start bottom-11" 
                  /> 
          </li>
         </ul>
@@ -18,7 +18,9 @@
 </template>
 
 <script>
-
+import defaultAvatarIcon from "../assets/sales.png";
+import IncomeIcon from "../assets/income.png";
+import InvoiceIcon from "../assets/invoice.png";
 import { ref } from 'vue'
 
  export default {
@@ -28,44 +30,47 @@ import { ref } from 'vue'
                  id: 1,
                  content:'Daily sales',
                  pieces: '6',
-                 image: [require("../assets/sales.png")],
+                 defaultAvatar: defaultAvatarIcon,
               
              },
              {
                  id: 2,
                  content:'Retail sales',
                  pieces: '6',
-                 image: [require("../assets/sales.png")],
+                 defaultAvatar: defaultAvatarIcon,
              },
              {
                  id: 3,
                  content:'Daily income',
                  price: '$ 3344',
-                 image: [require("../assets/income.png")],
+                 defaultAvatar: IncomeIcon,
              },
              {
                  id: 4,
                  content:'Retail income',
                  price: '$ 825',
-                 image: [require("../assets/income.png")],
+                 defaultAvatar: IncomeIcon,
              },
              {
                  id: 5,
                  content:'Invoices raised',
                  price: '$ 259',
                  image: [require("../assets/invoice.png")],
+                 defaultAvatar: InvoiceIcon,
              },
              {
                  id: 6,
                  content:'Total invoices',
                  pieces: '156',
                  image: [require("../assets/invoice.png")],
+                 defaultAvatar: InvoiceIcon,
              },
              {
                  id: 7,
                  content:'Expensens submitted',
                  pieces: '34',
                  image: [require("../assets/invoice.png")],
+                 defaultAvatar: InvoiceIcon,
            }
         ])
       return {
@@ -78,8 +83,8 @@ import { ref } from 'vue'
 
 <style>
  li {
-    border-bottom: 1px solid grey;
+    /* border-bottom: 1px solid grey; */
     text-align: start;
-    margin-left: 47px;
+    margin-left: 52px;
  }
 </style>

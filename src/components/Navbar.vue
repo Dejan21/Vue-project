@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5 border-solid shadow-md navbar bg-white-500 p-4 w-30 flex flex-row justify-between">
     <p class="text-left pl-64 text-slate-600 text-lg">Home</p>
-    <div class="flex font-bold items-center">
+    <div class="flex font-bold items-center ml-56">
       <img src="../assets/Grouplogo.png"  />
       <h1>Sellsio</h1>
     </div>

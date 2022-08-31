@@ -7,13 +7,13 @@
   </div>
   <div class="bg-red-50 ">
   <img src="../assets/Frame.png" class="m-auto mt-12 pt-12">
-    <ol class="" >
+    <ul  >
       <li 
       v-for="client in clients" 
       :key="client.id" 
       class=" li bg-red-50 p-2 relative left-14 text-start"
       >
-        <img :src="client.image" class="relative top-24 right-16" />
+        <img :src="client.defaultAvatar" class="relative top-24 right-16" />
         <span class="first"> {{ client.name }} </span>
         <span class="first">{{ client.number }}</span>
         <span class="relative float-right first ">{{ client.hours }}</span>
@@ -23,7 +23,7 @@
          <img class="pt-3" src="../assets/Reply.png">
         </button>
       </li>
-    </ol>
+    </ul>
   </div>
 </template>
 
@@ -34,6 +34,11 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import LeftPage from "@/pages/LeftPage.vue";
 import RightPage from "@/pages/RightPage.vue";
 import { ref } from 'vue'
+import defaultAvatarIcon from "../assets/michael.png";
+import defaultIcon from "../assets/amanda.png";
+import AndyIcon from "../assets/Andy.png";
+import UserCircle from "../assets/UserCircle.png";
+import Helen from "../assets/helen.png";
 
 export default {
   components: {
@@ -43,7 +48,6 @@ export default {
     RightPage
 },
 setup(){
-
   const clients = ref ([
     {
          id:1,
@@ -51,7 +55,8 @@ setup(){
          number: '(+ 41 34 345 2033)',
          hours: '2h ago',
          description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting   here       for your response. Have a nice day, Michael!',
-         image: [require("../assets/michael.png")],
+         defaultAvatar: defaultAvatarIcon,
+         neededData: {img: defaultAvatarIcon}
        },
        {
          id:1,
@@ -59,7 +64,8 @@ setup(){
          number: '(+ 41 12 585 2236)',
          hours: '5h ago',
          description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
-         image: [require("../assets/amanda.png")],
+         defaultAvatar: defaultIcon,
+         neededData: {img: defaultAvatarIcon}
        },
        {
          id:1,
@@ -67,7 +73,8 @@ setup(){
          number: '(+41 34 345 2023)',
          hours: '6h ago',
          description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
-         image: [require("../assets/UserCircle.png")],
+         defaultAvatar: UserCircle,
+         neededData: {img: defaultAvatarIcon}
        },
        {
          id:1,
@@ -75,7 +82,8 @@ setup(){
          number: '(+41 32 25 5889)',
          hours: '1 day ago',
          description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
-         image: [require("../assets/helen.png")],
+         defaultAvatar: Helen,
+         neededData: {img: defaultAvatarIcon}
        },
        {
          id:1,
@@ -83,7 +91,9 @@ setup(){
          number: '(+41 34 345 2023)',
          hours: '2 days ago',
          description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
-         image: [require("../assets/UserCircle.png")],
+        //  image: [require("../assets/UserCircle.png")],
+         defaultAvatar: UserCircle,
+         neededData: {img: defaultAvatarIcon}
        },
         {
          id:1,
@@ -91,7 +101,8 @@ setup(){
          number: '(+41 34 345 2023)',
          hours: '5h ago',
          description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
-         image: [require("../assets/michael.png")],
+         defaultAvatar: AndyIcon,
+         neededData: {img: defaultAvatarIcon}
        },
   ])
   return {

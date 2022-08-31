@@ -1,22 +1,25 @@
 <template>
-    <div class="absolute pt-16 right-96 inline">
+    <div class="absolute pt-20 right-96 inline">
         <ul>
          <li v-for="appointment in appointments"
          :key="appointment.id"
-         class="p-2 mr-6 h-18 "
+         class="mr-6 h-18 border-b border-b-gray"
          >
-         <img :src="appointment.image" 
+         <img :src="appointment.defaultAvatar" 
               class="relative right-14 top-12" />
          <span>{{appointment.content}}</span>
          <br />
          <span class="font-bold">{{appointment.pieces}}</span>
-         <img :src="appointment.img" class="relative left-44 bottom-10" />
+         <img :src="appointment.defaultAvatarIcon" class="relative left-44 bottom-10" />
          </li>
         </ul>
     </div>
 </template>
 
 <script>
+    import Image1Icon from "../assets/image1.png";
+    import ImageIcon from "../assets/image.png";
+    import ArrowSquareRightIcon from "../assets/ArrowSquareRight.png";
     import { ref } from 'vue'
 
  export default {
@@ -26,29 +29,29 @@
                  id: 1,
                  content:'New clients',
                  pieces: '44',
-                 image: [require("../assets/image.png")],
-                 img: [require("../assets/ArrowSquareRight.png")]
+                 defaultAvatarIcon: ArrowSquareRightIcon,
+                 defaultAvatar: Image1Icon,
              },
              {
                  id: 2,
                  content:'Appointments booked',
                  pieces: '26',
-                 image: [require("../assets/image1.png")],
-                 img: [require("../assets/ArrowSquareRight.png")]
+                 defaultAvatar: ImageIcon,
+                 defaultAvatarIcon: ArrowSquareRightIcon,
              },
              {
                  id: 3,
                  content:'Appointments booked',
                  pieces: '8',
-                 image: [require("../assets/image1.png")],
-                 img: [require("../assets/ArrowSquareRight.png")]
+                 defaultAvatar: ImageIcon,
+                 defaultAvatarIcon: ArrowSquareRightIcon,
              },
              {
                 id: 4,
                 content:'Appointments booked',
                 pieces: '6',
-                image: [require("../assets/image1.png")],
-                img: [require("../assets/ArrowSquareRight.png")]
+                defaultAvatar: ImageIcon,
+                defaultAvatarIcon: ArrowSquareRightIcon,
              },
       ])
         return {
@@ -59,7 +62,7 @@
 </script>
 
 <style>
- li{
+ /* li{
     border-bottom: 1px solid grey;
- }
+ } */
 </style>

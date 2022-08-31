@@ -18,10 +18,9 @@
         <span class="first">{{ client.number }}</span>
         <span class="relative float-right first ">{{ client.hours }}</span>
         <br />
-        <br />
         <span>{{ client.description }}</span>
         <button class="block">
-         <img src="../assets/Reply.png">
+         <img class="pt-3" src="../assets/Reply.png">
         </button>
       </li>
     </ol>
@@ -106,7 +105,7 @@ setup(){
 .li{
     width: 605px;
     margin-top: 2px;
-    height: 270px;
+    height: 245px;
     text-align: start;
     padding-left: 80px;
     margin-left: 593px;

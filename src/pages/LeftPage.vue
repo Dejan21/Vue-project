@@ -1,16 +1,16 @@
 <template>
-    <div class="absolute pt-32 ml-96">
+    <div class="absolute pt-36 ml-72">
         <ul class="border-b-gray w-72">
          <li  v-for="sale in sales"
               :key="sale.id" 
-              class=" p-6 h-20 border-b w-70 border-b-gray"
+              class=" pt-6 h-20 border border-t-0 border-l-0 pl-20 text-justify w-72 border-b-gray"
          >
-           <span class="relative "> {{sale.content}} </span>
+           <span class="relative right-6"> {{sale.content}} </span>
            <br />
-           <span class="font-bold relative"> {{sale.pieces}} </span>
-           <span class="font-bold text-start"> {{sale.price}} </span>
+           <span class="font-bold relative right-6"> {{sale.pieces}} </span>
+           <span class="font-bold relative right-6"> {{sale.price}} </span>
            <img :src="sale.defaultAvatar" 
-                 class="relative right-20 text-start bottom-11" 
+                 class="relative right-20 text-start bottom-12" 
                  /> 
          </li>
         </ul>
@@ -80,7 +80,6 @@ import { ref } from 'vue'
 
 <style>
  li {
-    text-align: start;
     margin-left: 52px;
     background-color: #FFFCFC;
  }

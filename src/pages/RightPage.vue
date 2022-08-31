@@ -3,7 +3,7 @@
         <ul >
          <li v-for="appointment in appointments"
          :key="appointment.id"
-         class="border-b border-b-gray w-72 relative pr-10 text-center"
+         class="border h-20 border-b-gray w-72 relative pr-10 text-center"
          >
          <img :src="appointment.defaultAvatar" 
               class=" relative  top-12" />

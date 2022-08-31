@@ -3,7 +3,7 @@
         <ul>
          <li v-for="appointment in appointments"
          :key="appointment.id"
-         class="p-2"
+         class="p-2 mr-6 h-18 "
          >
          <img :src="appointment.image" 
               class="relative right-14 top-12" />
@@ -59,5 +59,7 @@
 </script>
 
 <style>
-
+ li{
+    border-bottom: 1px solid grey;
+ }
 </style>

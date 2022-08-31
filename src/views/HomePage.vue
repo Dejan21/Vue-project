@@ -11,12 +11,12 @@
       <li 
       v-for="client in clients" 
       :key="client.id" 
-      class=" li bg-red-50 p-2 relative left-14 text-start border-double"
+      class=" li bg-red-50 p-2 relative left-14 text-start"
       >
         <img :src="client.image" class="relative top-24 right-16" />
-        <span > {{ client.name }} </span>
-        <span>{{ client.number }}</span>
-        <span class="relative left-20 ">{{ client.hours }}</span>
+        <span class="first"> {{ client.name }} </span>
+        <span class="first">{{ client.number }}</span>
+        <span class="relative float-right first ">{{ client.hours }}</span>
         <br />
         <br />
         <span>{{ client.description }}</span>
@@ -56,7 +56,7 @@ setup(){
        },
        {
          id:1,
-         name: 'Amanda',
+         name: 'Amanda Horryngton',
          number: '(+ 41 12 585 2236)',
          hours: '5h ago',
          description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
@@ -64,7 +64,7 @@ setup(){
        },
        {
          id:1,
-         name: 'John Connor',
+         name: 'John McRowe',
          number: '(+41 34 345 2023)',
          hours: '6h ago',
          description: 'Hey Dr. Richard, I’m trying to reach out this whole morning, but it seems you and your staff are too busy to answer me on my SMS. Please, I’m waiting here for your response. Have a nice day, Michael!',
@@ -72,7 +72,7 @@ setup(){
        },
        {
          id:1,
-         name: 'Helen Connor',
+         name: 'Helen Wisemeyer',
          number: '(+41 32 25 5889)',
          hours: '1 day ago',
          description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
@@ -88,7 +88,7 @@ setup(){
        },
         {
          id:1,
-         name: 'Michael Connor',
+         name: 'Andy Stockton',
          number: '(+41 34 345 2023)',
          hours: '5h ago',
          description: 'Hey, guys! Thanks for your time and effort. I wll definitely recommend it to anybody else.',
@@ -104,13 +104,18 @@ setup(){
 
 <style scoped>
 .li{
-    width: 590px;
+    width: 605px;
     margin-top: 2px;
     height: 270px;
-    border: double;
     text-align: start;
     padding-left: 80px;
-    margin-left: 600px;
+    margin-left: 593px;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
 }
 
+.first{
+  color:#9F9F9F
+}
 </style>

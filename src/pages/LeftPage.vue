@@ -78,7 +78,8 @@ import { ref } from 'vue'
 
 <style>
  li {
-    border-bottom: 1px dotted grey;
+    border-bottom: 1px solid grey;
     text-align: start;
+    margin-left: 47px;
  }
 </style>

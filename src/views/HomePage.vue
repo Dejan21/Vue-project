@@ -1,25 +1,27 @@
 <template>
   <Navbar  />
 
-  <div class="home overflow-hidden mt-0">
+  <div class="home ">
     <HeaderComponent  />
     <LeftPage />
     <RightPage />
-  <img src="../assets/Frame.png" class="float-right relative left-5 pt-20 ">
+
+  <img src="../assets/Frame.png" class="float-right relative left-5 pt-24 ">
     <ul class="mt-40" >
       <li 
       v-for="client in clients" 
       :key="client.id" 
-      class=" li p-2 relative left-19 pl-20 pb-48 text-start"
+      class=" li p-1 relative left-19 pl-20 pb-52 text-start border"
       >
-        <img :src="client.defaultAvatar" class="relative top-24 right-16" />
-        <span class="first"> {{ client.name }} </span>
-        <span class="first">{{ client.number }}</span>
-        <span class="relative float-right first ">{{ client.hours }}</span>
+        <img :src="client.defaultAvatar" class="relative top-10 right-16" />
+        
+        <span class="first relative bottom-7"> {{ client.name }} </span>
+        <span class="first relative bottom-7">{{ client.number }}</span>
+        <span class="relative float-right first bottom-7 ">{{ client.hours }}</span>
         <br />
-        <span>{{ client.description }}</span>
+        <span class="relative bottom-7">{{ client.description }}</span>
         <button class="block">
-         <img class="pt-2" src="../assets/Reply.png">
+         <img class="relative bottom-4" src="../assets/Reply.png">
         </button>
       </li>
     </ul>
@@ -122,7 +124,7 @@ setup(){
 }
 
 .first{
-  color:#9F9F9F
+  color:#9F9F9F;
 }
 .home{
   background-color: #FFFCFC;
